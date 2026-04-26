@@ -1,0 +1,11 @@
+2025-12-02 14:40:17.877 | INFO     | __main__:main:381 - Using device: mps
+2025-12-02 14:40:17.878 | INFO     | __main__:run_simulation:149 - Starting federated learning simulation
+2025-12-02 14:40:17.878 | INFO     | __main__:run_simulation:150 -   - Hospitals: 5
+2025-12-02 14:40:17.878 | INFO     | __main__:run_simulation:151 -   - Rounds: 3
+2025-12-02 14:40:17.878 | INFO     | __main__:run_simulation:152 -   - Device: mps
+2025-12-02 14:40:18.749 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:40:18.749 | INFO     | __main__:run_simulation:162 - Model: None - 4,335,998 parameters
+2025-12-02 14:40:18.762 | INFO     | src.fl_core.aggregation:__init__:103 - Adaptive Aggregation initialized
+2025-12-02 14:40:18.762 | INFO     | src.fl_core.aggregation:__init__:104 -   Weights: sample=0.3, stability=0.25, loss=0.25, quality=0.2
+2025-12-02 14:40:18.763 | INFO     | src.fl_core.metrics:__init__:102 - MetricsCollector initialized: fl_experiment_20251202_144018
+2025-12-02 14:40:18.763 | INFO     | __main__:run_simulation:218 - Starting Flower simulation...

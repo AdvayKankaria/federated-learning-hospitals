@@ -1,0 +1,134 @@
+2025-12-02 14:42:12.913 | INFO     | __main__:main:413 - Using device: mps
+2025-12-02 14:42:12.913 | INFO     | __main__:run_federated_learning:231 - Starting Federated Learning
+2025-12-02 14:42:12.913 | INFO     | __main__:run_federated_learning:232 -   - Hospitals: 5
+2025-12-02 14:42:12.913 | INFO     | __main__:run_federated_learning:233 -   - Rounds: 5
+2025-12-02 14:42:12.913 | INFO     | __main__:run_federated_learning:234 -   - Local epochs: 2
+2025-12-02 14:42:12.913 | INFO     | __main__:run_federated_learning:235 -   - Device: mps
+2025-12-02 14:42:13.274 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:42:13.378 | INFO     | __main__:run_federated_learning:246 - Model: EfficientNet-B0 - 4,335,998 parameters
+2025-12-02 14:42:13.410 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 354 images
+2025-12-02 14:42:13.410 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 7, Pneumonia: 347
+2025-12-02 14:42:13.422 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 44 images
+2025-12-02 14:42:13.422 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 1, Pneumonia: 43
+2025-12-02 14:42:13.434 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 45 images
+2025-12-02 14:42:13.435 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 1, Pneumonia: 44
+2025-12-02 14:42:13.469 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 593 images
+2025-12-02 14:42:13.469 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 7, Pneumonia: 586
+2025-12-02 14:42:13.482 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 76 images
+2025-12-02 14:42:13.482 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 1, Pneumonia: 75
+2025-12-02 14:42:13.496 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 77 images
+2025-12-02 14:42:13.496 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 1, Pneumonia: 76
+2025-12-02 14:42:13.578 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 2027 images
+2025-12-02 14:42:13.578 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 604, Pneumonia: 1423
+2025-12-02 14:42:13.599 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 256 images
+2025-12-02 14:42:13.599 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 72, Pneumonia: 184
+2025-12-02 14:42:13.619 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 255 images
+2025-12-02 14:42:13.619 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 78, Pneumonia: 177
+2025-12-02 14:42:13.656 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 671 images
+2025-12-02 14:42:13.657 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 17, Pneumonia: 654
+2025-12-02 14:42:13.670 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 81 images
+2025-12-02 14:42:13.670 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 2, Pneumonia: 79
+2025-12-02 14:42:13.684 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 85 images
+2025-12-02 14:42:13.684 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 2, Pneumonia: 83
+2025-12-02 14:42:13.717 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 523 images
+2025-12-02 14:42:13.717 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 440, Pneumonia: 83
+2025-12-02 14:42:13.730 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 66 images
+2025-12-02 14:42:13.730 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 55, Pneumonia: 11
+2025-12-02 14:42:13.743 | INFO     | src.data.dataset:__init__:194 - Dataset initialized with 63 images
+2025-12-02 14:42:13.743 | INFO     | src.data.dataset:__init__:195 - Class distribution - Normal: 53, Pneumonia: 10
+2025-12-02 14:42:13.743 | INFO     | src.fl_core.metrics:__init__:102 - MetricsCollector initialized: fl_20251202_144213
+2025-12-02 14:42:13.743 | INFO     | __main__:run_federated_learning:277 - 
+============================================================
+2025-12-02 14:42:13.743 | INFO     | __main__:run_federated_learning:278 - Round 1/5
+2025-12-02 14:42:13.744 | INFO     | __main__:run_federated_learning:279 - ============================================================
+2025-12-02 14:42:13.795 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:42:35.692 | INFO     | __main__:run_federated_learning:325 -   Hospital 0: Loss=0.2232, Acc=0.8864, Val Acc=0.8864
+2025-12-02 14:42:35.743 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:42:54.535 | INFO     | __main__:run_federated_learning:325 -   Hospital 1: Loss=0.2175, Acc=0.9080, Val Acc=1.0000
+2025-12-02 14:42:54.587 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:43:57.483 | INFO     | __main__:run_federated_learning:325 -   Hospital 2: Loss=0.1608, Acc=0.9360, Val Acc=0.9570
+2025-12-02 14:43:57.535 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:44:17.699 | INFO     | __main__:run_federated_learning:325 -   Hospital 3: Loss=0.2488, Acc=0.8875, Val Acc=1.0000
+2025-12-02 14:44:17.751 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:44:34.117 | INFO     | __main__:run_federated_learning:325 -   Hospital 4: Loss=0.2061, Acc=0.9102, Val Acc=0.9545
+2025-12-02 14:44:35.888 | INFO     | __main__:run_federated_learning:345 - 
+  [Global] Accuracy: 0.9556, AUC: 0.9091, Time: 142.1s
+2025-12-02 14:44:35.993 | INFO     | __main__:run_federated_learning:358 -   [NEW BEST] Accuracy: 0.9556
+2025-12-02 14:44:35.993 | DEBUG    | src.fl_core.metrics:add_round_metrics:163 - Round 1 metrics recorded
+2025-12-02 14:44:35.993 | INFO     | __main__:run_federated_learning:277 - 
+============================================================
+2025-12-02 14:44:35.993 | INFO     | __main__:run_federated_learning:278 - Round 2/5
+2025-12-02 14:44:35.993 | INFO     | __main__:run_federated_learning:279 - ============================================================
+2025-12-02 14:44:36.047 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:44:47.074 | INFO     | __main__:run_federated_learning:325 -   Hospital 0: Loss=0.1984, Acc=0.9176, Val Acc=0.7500
+2025-12-02 14:44:47.126 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:45:05.407 | INFO     | __main__:run_federated_learning:325 -   Hospital 1: Loss=0.1284, Acc=0.9531, Val Acc=0.9474
+2025-12-02 14:45:05.459 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:46:08.507 | INFO     | __main__:run_federated_learning:325 -   Hospital 2: Loss=0.1480, Acc=0.9375, Val Acc=0.9688
+2025-12-02 14:46:08.560 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:46:28.779 | INFO     | __main__:run_federated_learning:325 -   Hospital 3: Loss=0.1028, Acc=0.9563, Val Acc=0.9506
+2025-12-02 14:46:28.835 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:46:44.550 | INFO     | __main__:run_federated_learning:325 -   Hospital 4: Loss=0.1223, Acc=0.9492, Val Acc=0.9848
+2025-12-02 14:46:45.972 | INFO     | __main__:run_federated_learning:345 - 
+  [Global] Accuracy: 0.9778, AUC: 0.9773, Time: 130.0s
+2025-12-02 14:46:46.053 | INFO     | __main__:run_federated_learning:358 -   [NEW BEST] Accuracy: 0.9778
+2025-12-02 14:46:46.053 | DEBUG    | src.fl_core.metrics:add_round_metrics:163 - Round 2 metrics recorded
+2025-12-02 14:46:46.053 | INFO     | __main__:run_federated_learning:277 - 
+============================================================
+2025-12-02 14:46:46.053 | INFO     | __main__:run_federated_learning:278 - Round 3/5
+2025-12-02 14:46:46.053 | INFO     | __main__:run_federated_learning:279 - ============================================================
+2025-12-02 14:46:46.108 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:46:56.926 | INFO     | __main__:run_federated_learning:325 -   Hospital 0: Loss=0.1548, Acc=0.9545, Val Acc=0.9773
+2025-12-02 14:46:56.977 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:47:15.506 | INFO     | __main__:run_federated_learning:325 -   Hospital 1: Loss=0.1285, Acc=0.9635, Val Acc=0.9868
+2025-12-02 14:47:15.622 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:48:18.382 | INFO     | __main__:run_federated_learning:325 -   Hospital 2: Loss=0.1096, Acc=0.9573, Val Acc=0.9688
+2025-12-02 14:48:18.435 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:48:38.637 | INFO     | __main__:run_federated_learning:325 -   Hospital 3: Loss=0.0957, Acc=0.9625, Val Acc=1.0000
+2025-12-02 14:48:38.688 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:48:54.496 | INFO     | __main__:run_federated_learning:325 -   Hospital 4: Loss=0.1245, Acc=0.9551, Val Acc=0.9697
+2025-12-02 14:48:55.914 | INFO     | __main__:run_federated_learning:345 - 
+  [Global] Accuracy: 0.9556, AUC: 0.9773, Time: 129.9s
+2025-12-02 14:48:55.915 | DEBUG    | src.fl_core.metrics:add_round_metrics:163 - Round 3 metrics recorded
+2025-12-02 14:48:55.915 | INFO     | __main__:run_federated_learning:277 - 
+============================================================
+2025-12-02 14:48:55.915 | INFO     | __main__:run_federated_learning:278 - Round 4/5
+2025-12-02 14:48:55.915 | INFO     | __main__:run_federated_learning:279 - ============================================================
+2025-12-02 14:48:55.969 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:49:06.658 | INFO     | __main__:run_federated_learning:325 -   Hospital 0: Loss=0.0599, Acc=0.9915, Val Acc=0.9545
+2025-12-02 14:49:06.710 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:49:25.071 | INFO     | __main__:run_federated_learning:325 -   Hospital 1: Loss=0.0939, Acc=0.9653, Val Acc=0.9474
+2025-12-02 14:49:25.123 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:50:27.351 | INFO     | __main__:run_federated_learning:325 -   Hospital 2: Loss=0.1042, Acc=0.9598, Val Acc=0.9531
+2025-12-02 14:50:27.405 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:50:48.600 | INFO     | __main__:run_federated_learning:325 -   Hospital 3: Loss=0.1330, Acc=0.9734, Val Acc=1.0000
+2025-12-02 14:50:48.653 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:51:05.184 | INFO     | __main__:run_federated_learning:325 -   Hospital 4: Loss=0.1725, Acc=0.9512, Val Acc=0.9848
+2025-12-02 14:51:06.699 | INFO     | __main__:run_federated_learning:345 - 
+  [Global] Accuracy: 0.9556, AUC: 0.9773, Time: 130.8s
+2025-12-02 14:51:06.699 | DEBUG    | src.fl_core.metrics:add_round_metrics:163 - Round 4 metrics recorded
+2025-12-02 14:51:06.699 | INFO     | __main__:run_federated_learning:277 - 
+============================================================
+2025-12-02 14:51:06.699 | INFO     | __main__:run_federated_learning:278 - Round 5/5
+2025-12-02 14:51:06.699 | INFO     | __main__:run_federated_learning:279 - ============================================================
+2025-12-02 14:51:06.755 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:51:17.847 | INFO     | __main__:run_federated_learning:325 -   Hospital 0: Loss=0.0800, Acc=0.9886, Val Acc=0.9773
+2025-12-02 14:51:17.899 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:51:37.227 | INFO     | __main__:run_federated_learning:325 -   Hospital 1: Loss=0.0615, Acc=0.9878, Val Acc=0.9868
+2025-12-02 14:51:37.279 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:52:42.490 | INFO     | __main__:run_federated_learning:325 -   Hospital 2: Loss=0.0892, Acc=0.9668, Val Acc=0.9727
+2025-12-02 14:52:42.544 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:53:02.239 | INFO     | __main__:run_federated_learning:325 -   Hospital 3: Loss=0.0686, Acc=0.9781, Val Acc=1.0000
+2025-12-02 14:53:02.291 | INFO     | src.models.efficientnet:__init__:67 - Initialized efficientnet_b0 with 1280 features
+2025-12-02 14:53:18.057 | INFO     | __main__:run_federated_learning:325 -   Hospital 4: Loss=0.1303, Acc=0.9609, Val Acc=1.0000
+2025-12-02 14:53:19.508 | INFO     | __main__:run_federated_learning:345 - 
+  [Global] Accuracy: 0.9556, AUC: 0.9773, Time: 132.8s
+2025-12-02 14:53:19.509 | DEBUG    | src.fl_core.metrics:add_round_metrics:163 - Round 5 metrics recorded
+2025-12-02 14:53:19.509 | INFO     | __main__:run_federated_learning:378 - 
+============================================================
+2025-12-02 14:53:19.509 | INFO     | __main__:run_federated_learning:379 - Training Complete!
+2025-12-02 14:53:19.509 | INFO     | __main__:run_federated_learning:380 - Best Accuracy: 0.9778
+2025-12-02 14:53:19.509 | INFO     | __main__:run_federated_learning:381 - ============================================================
+2025-12-02 14:53:19.609 | INFO     | src.fl_core.metrics:finalize:187 - Metrics collection finalized
+2025-12-02 14:53:19.613 | INFO     | __main__:main:458 - 
+Results saved to checkpoints/ and metrics/

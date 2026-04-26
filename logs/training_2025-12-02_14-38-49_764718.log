@@ -1,0 +1,11 @@
+2025-12-02 14:38:49.786 | INFO     | __main__:main:381 - Using device: mps
+2025-12-02 14:38:49.786 | INFO     | __main__:main:396 - Creating hospital data partitions...
+2025-12-02 14:38:49.801 | INFO     | src.data.partition:create_hospital_partitions:229 - Total images: 5856
+2025-12-02 14:38:49.801 | INFO     | src.data.partition:create_hospital_partitions:230 - Class distribution: Normal=1583, Pneumonia=4273
+2025-12-02 14:38:49.804 | INFO     | src.data.partition:create_hospital_partitions:305 - Hospital 0: Train=392 (P:382), Val=49, Test=50
+2025-12-02 14:38:49.806 | INFO     | src.data.partition:create_hospital_partitions:305 - Hospital 1: Train=648 (P:640), Val=81, Test=82
+2025-12-02 14:38:49.809 | INFO     | src.data.partition:create_hospital_partitions:305 - Hospital 2: Train=2270 (P:1571), Val=284, Test=284
+2025-12-02 14:38:49.811 | INFO     | src.data.partition:create_hospital_partitions:305 - Hospital 3: Train=752 (P:732), Val=94, Test=94
+2025-12-02 14:38:49.813 | INFO     | src.data.partition:create_hospital_partitions:305 - Hospital 4: Train=620 (P:91), Val=78, Test=78
+2025-12-02 14:38:49.815 | INFO     | src.data.partition:create_hospital_partitions:333 - Partition saved to data/rsna-pneumonia/partition_non_iid_5hospitals.json
+2025-12-02 14:38:49.815 | INFO     | __main__:main:404 - Partitions created successfully!
