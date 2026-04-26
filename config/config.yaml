@@ -1,0 +1,111 @@
+# Federated Learning Configuration for Hospital Pneumonia Detection
+# ===================================================================
+
+# Dataset Configuration
+dataset:
+  name: "rsna-pneumonia-detection"
+  kaggle_competition: "rsna-pneumonia-detection-challenge"
+  data_dir: "./data/rsna-pneumonia"
+  image_size: 224
+  num_classes: 2  # Pneumonia vs Normal
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+
+# Federated Learning Configuration
+federated:
+  num_hospitals: 5
+  num_rounds: 50
+  fraction_fit: 1.0  # Fraction of clients for training
+  fraction_evaluate: 1.0  # Fraction of clients for evaluation
+  min_fit_clients: 5
+  min_evaluate_clients: 5
+  min_available_clients: 5
+
+# Local Training Configuration
+training:
+  local_epochs: 3
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  optimizer: "adam"
+  scheduler: "cosine"
+  warmup_epochs: 1
+
+# Model Configuration
+model:
+  architecture: "efficientnet_b0"
+  pretrained: true
+  dropout: 0.3
+  freeze_backbone_epochs: 0  # Number of epochs to freeze backbone
+
+# Differential Privacy Configuration
+privacy:
+  enabled: true
+  epsilon: 8.0
+  delta: 1e-5
+  max_grad_norm: 1.0
+  noise_multiplier: null  # Computed automatically based on epsilon
+  secure_mode: false
+
+# Adaptive Aggregation Configuration
+aggregation:
+  strategy: "adaptive"  # Options: fedavg, fedprox, adaptive
+  # Adaptive weights configuration
+  sample_weight: 0.3      # Weight based on number of samples
+  stability_weight: 0.25  # Weight based on gradient stability
+  loss_weight: 0.25       # Weight based on loss improvement
+  quality_weight: 0.2     # Weight based on data quality metrics
+  # FedProx specific
+  proximal_mu: 0.01
+  # Stability tracking
+  stability_window: 5     # Number of rounds to track for stability
+
+# Non-IID Data Distribution
+data_distribution:
+  type: "non_iid"  # Options: iid, non_iid, quantity_skew
+  # Non-IID settings (Dirichlet distribution)
+  dirichlet_alpha: 0.5  # Lower = more non-IID (0.1 very skewed, 1.0 moderate)
+  # Quantity skew settings
+  min_samples_per_hospital: 500
+  max_samples_per_hospital: 5000
+
+# Explainability Configuration
+explainability:
+  enabled: true
+  method: "gradcam"
+  target_layer: "features"  # Layer for Grad-CAM
+  num_samples_to_explain: 10  # Per evaluation round
+
+# Dashboard Configuration
+dashboard:
+  enabled: true
+  host: "0.0.0.0"
+  port: 8000
+  frontend_port: 3000
+  update_interval: 5  # Seconds between metric updates
+  
+# Logging Configuration
+logging:
+  level: "INFO"
+  save_dir: "./logs"
+  tensorboard: true
+  wandb: false
+  wandb_project: "hospital-federated-learning"
+
+# Checkpointing
+checkpointing:
+  enabled: true
+  save_dir: "./checkpoints"
+  save_every_n_rounds: 5
+  keep_last_n: 3
+
+# Hardware Configuration
+hardware:
+  device: "auto"  # auto, cuda, mps, cpu
+  num_workers: 4
+  pin_memory: true
+
+# Seed for reproducibility
+seed: 42
+

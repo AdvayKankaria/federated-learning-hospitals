@@ -1,0 +1,133 @@
+# Docker Compose for Hospital Federated Learning
+# ================================================
+# Run with: docker-compose up
+
+version: '3.8'
+
+services:
+  # Dashboard (Frontend + Backend API)
+  dashboard:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.dashboard
+    ports:
+      - "3000:80"
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./metrics:/app/metrics
+      - ./explanations:/app/explanations
+      - ./checkpoints:/app/checkpoints
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - fl-network
+    restart: unless-stopped
+
+  # Federated Learning Server
+  fl-server:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+      - ./checkpoints:/app/checkpoints
+      - ./logs:/app/logs
+      - ./metrics:/app/metrics
+      - ./config:/app/config
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DASHBOARD_API=http://dashboard:8000
+    depends_on:
+      - dashboard
+    networks:
+      - fl-network
+    command: >
+      python train.py 
+      --train 
+      --api-url http://dashboard:8000
+
+  # Hospital Clients (can scale)
+  hospital-1:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.client
+    volumes:
+      - ./data:/app/data
+    environment:
+      - HOSPITAL_ID=0
+      - FL_SERVER=fl-server:8080
+    depends_on:
+      - fl-server
+    networks:
+      - fl-network
+
+  hospital-2:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.client
+    volumes:
+      - ./data:/app/data
+    environment:
+      - HOSPITAL_ID=1
+      - FL_SERVER=fl-server:8080
+    depends_on:
+      - fl-server
+    networks:
+      - fl-network
+
+  hospital-3:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.client
+    volumes:
+      - ./data:/app/data
+    environment:
+      - HOSPITAL_ID=2
+      - FL_SERVER=fl-server:8080
+    depends_on:
+      - fl-server
+    networks:
+      - fl-network
+
+  hospital-4:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.client
+    volumes:
+      - ./data:/app/data
+    environment:
+      - HOSPITAL_ID=3
+      - FL_SERVER=fl-server:8080
+    depends_on:
+      - fl-server
+    networks:
+      - fl-network
+
+  hospital-5:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.client
+    volumes:
+      - ./data:/app/data
+    environment:
+      - HOSPITAL_ID=4
+      - FL_SERVER=fl-server:8080
+    depends_on:
+      - fl-server
+    networks:
+      - fl-network
+
+networks:
+  fl-network:
+    driver: bridge
+
+volumes:
+  data:
+  checkpoints:
+  logs:
+  metrics:
+  explanations:
+

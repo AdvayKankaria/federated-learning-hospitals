@@ -1,0 +1,66 @@
+# Dockerfile for Dashboard
+# =========================
+
+FROM node:18-alpine AS frontend-builder
+
+WORKDIR /app/frontend
+
+# Copy frontend files
+COPY dashboard/frontend/package.json .
+RUN npm install
+
+COPY dashboard/frontend/ .
+RUN npm run build
+
+# Python backend
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    nginx \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements
+COPY requirements.txt .
+RUN pip install --no-cache-dir fastapi uvicorn aiofiles python-multipart websockets sqlalchemy aiosqlite
+
+# Copy backend
+COPY dashboard/backend/ ./backend/
+
+# Copy frontend build
+COPY --from=frontend-builder /app/frontend/build ./frontend/build
+
+# Nginx config
+RUN echo 'server { \
+    listen 80; \
+    location / { \
+        root /app/frontend/build; \
+        try_files $uri $uri/ /index.html; \
+    } \
+    location /api { \
+        proxy_pass http://localhost:8000; \
+    } \
+    location /ws { \
+        proxy_pass http://localhost:8000; \
+        proxy_http_version 1.1; \
+        proxy_set_header Upgrade $http_upgrade; \
+        proxy_set_header Connection "upgrade"; \
+    } \
+}' > /etc/nginx/conf.d/default.conf
+
+# Environment
+ENV PYTHONUNBUFFERED=1
+
+# Expose port
+EXPOSE 80 8000
+
+# Start script
+RUN echo '#!/bin/sh\n\
+nginx\n\
+cd /app && python -m uvicorn backend.main:app --host 0.0.0.0 --port 8000' > /start.sh && \
+    chmod +x /start.sh
+
+CMD ["/start.sh"]
+
