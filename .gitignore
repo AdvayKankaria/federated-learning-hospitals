@@ -36,16 +36,11 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
-# Data
-data/
+# Data: dataset is tracked for reproducibility; keep raw DICOM out of git (often huge/sensitive)
 *.dcm
 *.dicom
 
-# Model checkpoints
-checkpoints/
-*.pt
-*.pth
-*.ckpt
+# Checkpoints: tracked under checkpoints/ (~50MB). Omit global *.pt so those weights can be committed.
 
 # Logs
 logs/
@@ -53,13 +48,9 @@ logs/
 
 # Metrics
 metrics/
-*.json
 
-# Explanations
+# Explanations (generated plots — keep folder ignored, not all images repo-wide)
 explanations/
-*.png
-*.jpg
-*.jpeg
 
 # Environment
 .env
